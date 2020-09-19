@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+
+    <style>
+        .mySlides {
+        
+            
+            border: 1px solid black;
+            height: 335px;
+           
+          
+           position: relative; 
+           left:895px;  
+           top:45px;
+        }
+
+        body {
+            background-image: url(back1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .transbox {
+
+            background-color: rgba(0,0,0,0.1);
+            border-radius: 25px;
+            padding: 15px;
+            position: relative;
+  left: 110px;
+  top: 120px;
+
+            
+        }
+        .loc {
+            
+            height: 100px;
+            width: 300px;
+
+        }
+        input {
+            color: rgb(7, 7, 7);
+            font-family: Cambria;
+            font-size: 15px;
+            
+            
+        
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="loc">
+        <div class="transbox">
+            <form method="GET" action="action.php">
+                <span>Name:</span><input style="height:18px"  type="text" name="name"><br>
+                Date-of-birth:<input type="date"  style="height:18px" name="date-of-birth"><br>
+                Contact:<input type="tel" id="phone" name="phone"  style="height:18px" placeholder="0123456789"
+                    pattern="[0-9]{4}[0-9]{3}[0-9]{3}"><br>
+                Email:<input type="email" style="height:18px" required name="email"><br>
+                Gender:<input type="radio"  name="gender" value="male">Male
+                <input  type="radio" name="gender" value="female">Female
+                <input  type="radio" name="gender" value="other">Other<br>
+                <form action="upload.php" method="post"  style="height:18px" enctype="multipart/form-data">
+                    Select image to upload:
+                    <input type="file" name="fileToUpload"    id="fileToUpload">
+                    <input type="submit" value="Upload Image"   name="submit">
+                </form><br>
+                District:<select name="districts" style=>
+                    <option value="srikakulam" name="srikakulam">Srikakulam</option>
+                    <option value="vijayanagaram" name="vijayanagaram">Vijayanagaram</option>
+                    <option value="vishakapatnam" name="vishakapatnam">Vishakapatnam</option>
+                    <option value="west.godavari" name="west.godavari">WestGodavari</option>
+                    <option value="East.godavari" name="East.godavari">EastGodavari</option>
+                    <option value="Krishna" name="Krishna">Krishna</option>
+                    <option value="Prakasam" name="Prakasam">Prakasam</option>
+                    <option value="Nellore" name="Nellore">Nellore</option>
+                    <option value="Chittor" name="Chittor">Chittor</option>
+                    <option value="kurnool" name="kurnool">Kurnool</option>
+                    <option value="Guntur" name="Guntur">Guntur</option>
+                    <option value="Anantapur" name="Anantapur">Anantapur</option>
+                    <option value="Kadapa" name="Kadapa">Kadapa</option>
+                </select><br>
+                date-of-farming:<input type="date" name="date-of-farming"><br>
+                Crop:<select name="Crop">
+                    <option value="paddy" name="paddy">Paddy</option>
+                    <option value="Groundnut" name="Groundnut">Groundnut</option>
+                    <option value="Cotton" name="Cotton">Cotton</option>
+                    <option value="corn" name="corn">corn</option>
+                    <option value="cerals" name="cerals">Cerals</option>
+                    <option value="Pulses" name="Pulses">Pulses</option>
+                    <option value="Mirchi" name="Mirchi">Mirchi</option>
+                    <option value="Mango" name="Mango">Mango</option>
+                    <option value="tomato" name="Tomato">Tomato</option>
+                    <option value="Lemon" name="Lemon">Lemon</option>
+                    <option value="Carrot" name="Carrot">Carrot</option>
+
+                </select><br>
+
+                <button type="button" height:2px; width:20px  background-color:black >Register</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="w3-content w3-section" style="max-width: 590px;" >
+        <img class="mySlides" src="plough1.jpg" style="width:100%">
+        <img class="mySlides" src="water.jpg" style="width:100%">
+        <img class="mySlides" src="spread.jpg" style="width:100%">
+        <img class="mySlides" src="spread2.jpg" style="width:100%">
+        <img class="mySlides" src="look.jpg" style="width:100%">
+        <img class="mySlides" src="look2.jpg" style="width:100%">
+        <img class="mySlides" src="look3.jpg" style="width:100%">
+        <img class="mySlides" src="look4.jpg" style="width:100%">
+        <img class="mySlides" src="unnamed.jpg" style="width:100%">
+
+    </div>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+    </script>
+
+</body>
+
+</html>
