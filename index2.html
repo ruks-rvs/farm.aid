@@ -6,17 +6,16 @@
 </head>
 <body style="background-image: url(donut.jpg);">
 	<h1> LOGIN FORM</h1>
-<form name="form" method="quiz()">
+<form name="form" method="login()">
 	Username<input required type="text" placeholder="Enter Your Name" name="user" /><br>
 	Password<input required type="password" placeholder="Password"  name="pass"/><br>
 
 <input  type="submit" name="Login" value="Login"><br>
-<a href="register.html">New User</a>
 
 </form>
 <script>
-	function quiz(){
-		if((document.form.user.value=="Divya"||"Lalitha"||"Harshitha"||"Sravani"||"Bhavya")&&document.form.pass.value=="quiz"){
+	function login(){
+		if((document.form.user.value=="praneethab"||"krishna"||"Rupasri"||"AdityaRachapudi"||"Adithisharma"||"Chandhu")&&document.form.pass.value=="farmaid"){
 			document.form.action="customer.html";
 			
 		}
