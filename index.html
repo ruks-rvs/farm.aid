@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+	<link rel="stylesheet" type="text/css" href="register1.css">
+</head>
+<body>
+	<!--use GET,not POST-->
+
+<div>
+<form method="GET" action="action.php">
+	<span>Name:</span><input type="text"name="name"><br>
+	date-of-birth:<input type="date" name="date-of-birth"><br>
+	Contact:<input type="tel" id="phone" name="phone" placeholder="0123456789" pattern="[0-9]{4}[0-9]{3}[0-9]{3}"><br>
+	Email:<input type="email" required name="email"><br>
+	Gender:<input type="radio" name="gender" value="male">Male<br>
+	       <input type="radio" name="gender" value="female">Female<br>
+	       <input type="radio" name="gender" value="other">Other<br>
+	<form action="upload.php" method="post" enctype="multipart/form-data">
+              Select image to upload:
+               <input type="file" name="fileToUpload" id="fileToUpload"><br>
+               <input type="submit" value="Upload Image" name="submit">
+               </form><br>
+District:<select name="districts">
+	<option value="srikakulam" name="srikakulam">Srikakulam</option>
+	<option value="vijayanagaram" name="vijayanagaram">Vijayanagaram</option>
+	<option value="vishakapatnam" name="vishakapatnam">Vishakapatnam</option>
+	<option value="west.godavari" name="west.godavari">WestGodavari</option>
+	<option value="East.godavari" name="East.godavari">EastGodavari</option>
+	<option value="Krishna" name="Krishna">Krishna</option>
+	<option value="Prakasam" name="Prakasam">Prakasam</option>
+	<option value="Nellore" name="Nellore">Nellore</option>
+	<option value="Chittor" name="Chittor">Chittor</option>
+	<option value="kurnool" name="kurnool">Kurnool</option>
+	<option value="Guntur" name="Guntur">Guntur</option>
+	<option value="Anantapur" name="Anantapur">Anantapur</option>
+	<option value="Kadapa" name="Kadapa">Kadapa</option>
+</select><br>
+	date-of-farming:<input type="date" name="date-of-farming"><br>
+	Crop:<select name="Crop">
+	<option value="paddy" name="paddy">Paddy</option>
+	<option value="Groundnut" name="Groundnut">Groundnut</option>
+	<option value="Cotton" name="Cotton">Cotton</option>
+	<option value="corn" name="corn">corn</option>
+	<option value="cerals" name="cerals">Cerals</option>
+	<option value="Pulses" name="Pulses">Pulses</option>
+	<option value="Mirchi" name="Mirchi">Mirchi</option>
+	<option value="Mango" name="Mango">Mango</option>
+	<option value="tomato" name="Tomato">Tomato</option>
+	<option value="Lemon" name="Lemon">Lemon</option>
+	<option value="Carrot" name="Carrot">Carrot</option>
+	
+</select><br>
+
+	<input type="submit" value="Register!!">
+</form>
+</div>
+</body>
+</html>
