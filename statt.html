@@ -8,17 +8,12 @@
 
     <style>
         .mySlides {
-        
-            
             border: 1px solid black;
             height: 335px;
-           
-          
-           position: relative; 
-           left:895px;  
-           top:45px;
+            position: relative;
+            left: 895px;
+            top: 45px;
         }
-
         body {
             background-image: url(back1.jpg);
             background-repeat: no-repeat;
@@ -26,30 +21,74 @@
         }
 
         .transbox {
-
-            background-color: rgba(0,0,0,0.1);
+            width:400px;
+            background-color: rgba(0, 0, 0, 0.1);
             border-radius: 25px;
-            padding: 15px;
             position: relative;
-  left: 110px;
-  top: 120px;
-
-            
+            left: 200px;
+            top: 70px;
+            padding-left: 10px;
+            padding-right: 10px;
+            -webkit-box-shadow: -21px 36px 42px -1px rgba(0,0,0,0.75);
+-moz-box-shadow: -21px 36px 42px -1px rgba(0,0,0,0.75);
+box-shadow: -21px 36px 42px -1px rgba(0,0,0,0.75);
         }
+
         .loc {
-            
+
             height: 100px;
             width: 300px;
 
         }
+
         input {
-            color: rgb(7, 7, 7);
-            font-family: Cambria;
+            color: rgb(24, 15, 15);
+            font-family: Cambria black;
             font-size: 15px;
-            
-            
-        
+       
+            background: rgba(248, 244, 244, 0.945);
         }
+        .inputbox{
+            padding:10px 5px 10px;
+            font-size: 5;
+            font-style:unset;
+        }
+        .transbox h2{
+            margin:2px;
+            padding:  5px 7px;
+            color:white;
+             text-align: center;
+        }
+        .buttonlook{
+            text-align: center;
+            padding: 10px;
+           background: transparent;
+           border:none;
+           outline: none;
+           
+        }
+        .transbox button[type="button"]{
+    color: rgb(248, 245, 245);
+    padding: 5px 5px;
+    border: none;
+    font-size: 20px;
+    border-radius: 12px;
+    border: 2px black;
+    font-family: Lucida Sans;
+    background-color:rgba(11, 53, 11, 0.6) ;
+    margin: 5px;
+    display: inline-block;
+    cursor: pointer;
+    
+}    
+
+label{
+    
+    padding-right: 15px;
+
+
+}
+
     </style>
 
 </head>
@@ -57,57 +96,60 @@
 <body>
     <div class="loc">
         <div class="transbox">
-            <form method="GET" action="action.php">
-                <span>Name:</span><input style="height:18px"  type="text" name="name"><br>
-                Date-of-birth:<input type="date"  style="height:18px" name="date-of-birth"><br>
-                Contact:<input type="tel" id="phone" name="phone"  style="height:18px" placeholder="0123456789"
-                    pattern="[0-9]{4}[0-9]{3}[0-9]{3}"><br>
-                Email:<input type="email" style="height:18px" required name="email"><br>
-                Gender:<input type="radio"  name="gender" value="male">Male
-                <input  type="radio" name="gender" value="female">Female
-                <input  type="radio" name="gender" value="other">Other<br>
-                <form action="upload.php" method="post"  style="height:18px" enctype="multipart/form-data">
-                    Select image to upload:
-                    <input type="file" name="fileToUpload"    id="fileToUpload">
-                    <input type="submit" value="Upload Image"   name="submit">
-                </form><br>
-                District:<select name="districts" style=>
-                    <option value="srikakulam" name="srikakulam">Srikakulam</option>
-                    <option value="vijayanagaram" name="vijayanagaram">Vijayanagaram</option>
-                    <option value="vishakapatnam" name="vishakapatnam">Vishakapatnam</option>
-                    <option value="west.godavari" name="west.godavari">WestGodavari</option>
-                    <option value="East.godavari" name="East.godavari">EastGodavari</option>
-                    <option value="Krishna" name="Krishna">Krishna</option>
-                    <option value="Prakasam" name="Prakasam">Prakasam</option>
-                    <option value="Nellore" name="Nellore">Nellore</option>
-                    <option value="Chittor" name="Chittor">Chittor</option>
-                    <option value="kurnool" name="kurnool">Kurnool</option>
-                    <option value="Guntur" name="Guntur">Guntur</option>
-                    <option value="Anantapur" name="Anantapur">Anantapur</option>
-                    <option value="Kadapa" name="Kadapa">Kadapa</option>
-                </select><br>
-                date-of-farming:<input type="date" name="date-of-farming"><br>
-                Crop:<select name="Crop">
-                    <option value="paddy" name="paddy">Paddy</option>
-                    <option value="Groundnut" name="Groundnut">Groundnut</option>
-                    <option value="Cotton" name="Cotton">Cotton</option>
-                    <option value="corn" name="corn">corn</option>
-                    <option value="cerals" name="cerals">Cerals</option>
-                    <option value="Pulses" name="Pulses">Pulses</option>
-                    <option value="Mirchi" name="Mirchi">Mirchi</option>
-                    <option value="Mango" name="Mango">Mango</option>
-                    <option value="tomato" name="Tomato">Tomato</option>
-                    <option value="Lemon" name="Lemon">Lemon</option>
-                    <option value="Carrot" name="Carrot">Carrot</option>
-
-                </select><br>
-
-                <button type="button" height:2px; width:20px  background-color:black >Register</button>
-            </form>
-        </div>
+                 <h2>Registration</h2>
+                 <form>
+                     <div class="inputbox"><label>NAME : </label><input  type="text " placeholder="ENTER YOUR NAME" name="" required=""></div>
+                     <div class="inputbox"><label>DOB :      </label><input type="date"  name="date-of-birth"></div>
+                     <div class="inputbox"><label>CONTACT :</label><input type="tel" id="phone" name="phone" style="height:18px" placeholder="CONTACT NUMBER"
+                     pattern="[0-9]{4}[0-9]{3}[0-9]{3}"></div>
+                     <div class="inputbox"><label>EMAIL :  <span></span></label><input type="text "  placeholder=" ENTER EMAIL" name="" required=""></div>
+                     <div class="inputbox"><label>Gender :</label><span>         </span><input type="radio" name="gender" value="male">Male
+                        <input type="radio" name="gender" value="female">Female
+                        <input type="radio" name="gender" value="other">Other</div>
+                        <div class="inputbox"><form action="upload.php" method="post"  enctype="multipart/form-data">
+                            <label style="font-size: 20px">Select image to upload</label><br>
+                            <br>
+                            <input class="change" type="file" name="fileToUpload" id="fileToUpload">
+                            <br>
+                            <br>
+                            <input class="change " type="submit" value="Upload Image" name="submit">
+                        </form>
+                        </div>
+                        <div class="inputbox" ><label>District</label><span>         </span><select name="districts" style=>
+                            <option value="srikakulam" name="srikakulam">Srikakulam</option>
+                            <option value="vijayanagaram" name="vijayanagaram">Vijayanagaram</option>
+                            <option value="vishakapatnam" name="vishakapatnam">Vishakapatnam</option>
+                            <option value="west.godavari" name="west.godavari">WestGodavari</option>
+                            <option value="East.godavari" name="East.godavari">EastGodavari</option>
+                            <option value="Krishna" name="Krishna">Krishna</option>
+                            <option value="Prakasam" name="Prakasam">Prakasam</option>
+                            <option value="Nellore" name="Nellore">Nellore</option>
+                            <option value="Chittor" name="Chittor">Chittor</option>
+                            <option value="kurnool" name="kurnool">Kurnool</option>
+                            <option value="Guntur" name="Guntur">Guntur</option>
+                            <option value="Anantapur" name="Anantapur">Anantapur</option>
+                            <option value="Kadapa" name="Kadapa">Kadapa</option>
+                        </select></div>
+                        <div class="inputbox"><label>choose date</label><input type="date" name="date-of-farming"></div>
+                        <div class="inputbox"><label>Crop</label><select name="Crop">
+                            <option value="paddy" name="paddy">Paddy</option>
+                            <option value="Groundnut" name="Groundnut">Groundnut</option>
+                            <option value="Cotton" name="Cotton">Cotton</option>
+                            <option value="corn" name="corn">corn</option>
+                            <option value="cerals" name="cerals">Cerals</option>
+                            <option value="Pulses" name="Pulses">Pulses</option>
+                            <option value="Mirchi" name="Mirchi">Mirchi</option>
+                            <option value="Mango" name="Mango">Mango</option>
+                            <option value="tomato" name="Tomato">Tomato</option>
+                            <option value="Lemon" name="Lemon">Lemon</option>
+                            <option value="Carrot" name="Carrot">Carrot</option>
+                        </select></div>
+                        <div class="buttonlook" ><button   type="button">Register</button></div>
+                 </form>
+                  </div>
     </div>
 
-    <div class="w3-content w3-section" style="max-width: 590px;" >
+    <div class="w3-content w3-section" style="max-width: 590px;">
         <img class="mySlides" src="plough1.jpg" style="width:100%">
         <img class="mySlides" src="water.jpg" style="width:100%">
         <img class="mySlides" src="spread.jpg" style="width:100%">
